@@ -7,6 +7,8 @@
   <persistence-unit name="parks">
     <provider>org.hibernate.jpa.HibernatePersistenceProvider
     </provider>
+    
+    <class>com.skilldistillery.parks.entities.Park</class>
 
     <properties>
       <property name="javax.persistence.jdbc.url"

@@ -24,13 +24,13 @@ CREATE TABLE IF NOT EXISTS `park` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(100) NOT NULL,
   `location` VARCHAR(100) NULL,
-  `size` DOUBLE NULL,
-  `annual_visits` DOUBLE NULL,
+  `size` DOUBLE NOT NULL,
+  `annual_visits` DOUBLE NOT NULL,
   `dangers` VARCHAR(500) NULL,
   `founded` INT NULL,
-  `addmission_cost` DOUBLE NULL,
-  `main attraction` VARCHAR(500) NULL,
-  `distance` DOUBLE NULL,
+  `admission_cost` DOUBLE NOT NULL,
+  `main_attraction` VARCHAR(500) NULL,
+  `distance` DOUBLE NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -44,3 +44,14 @@ GRANT SELECT, INSERT, TRIGGER, UPDATE, DELETE ON TABLE * TO 'parksuser'@'localho
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+-- -----------------------------------------------------
+-- Data for table `park`
+-- -----------------------------------------------------
+START TRANSACTION;
+USE `parksdb`;
+INSERT INTO `park` (`id`, `name`, `location`, `size`, `annual_visits`, `dangers`, `founded`, `admission_cost`, `main_attraction`, `distance`) VALUES (1, 'Zion', 'Springdale, UT', 0, 0, NULL, NULL, 0, 'The Narrows', 0);
+INSERT INTO `park` (`id`, `name`, `location`, `size`, `annual_visits`, `dangers`, `founded`, `admission_cost`, `main_attraction`, `distance`) VALUES (2, 'Sequioa', 'Threen Rivers, CA', 0, 0, NULL, NULL, 0, 'The General Sherman Tree', 0);
+
+COMMIT;
+

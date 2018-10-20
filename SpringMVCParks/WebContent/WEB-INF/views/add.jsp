@@ -78,7 +78,7 @@
 		<div class="row">
 			<label>Distance from Denver</label>
 			<div class="col-3">
-				<input type="number" name="distance" />
+				<input id="dis"type="number" name="distance" />
 
 			</div>
 		</div>

@@ -12,8 +12,8 @@ h1{
 	position: relative;
 	margin-left:5%;
 	margin-top:0%;
-	top:21%;
-	left:6%;
+	top:15%;
+	left:10%;
 	font-weight: bold;
 	width: 250px;
 	height:50px;
@@ -21,7 +21,7 @@ h1{
 #fields{
 	
 	position:relative;
-	margin-top:14%;
+	margin-top:10%;
 	margin-left:8%;
 	color:black;
 	
@@ -37,11 +37,11 @@ input[type=text] {
 	position: fixed;
 	background-color: rgb(179, 179, 179);
 	opacity:.9;
-	width:30%;
-	height:60%;
+	width:35%;
+	height:75%;
 	z-index-1;
 	margin-left:5%;
-	margin-top:12%;
+	margin-top:2%;
 }
 #add {
 	position:relative;
@@ -75,6 +75,9 @@ input[type=text] {
 }
 #na{
 	width:286px;
+}
+#dis{
+	width:173px;
 }
 
 

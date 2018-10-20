@@ -22,10 +22,14 @@
 <h2>What would Smokey say!</h2>
 <form action="deletePark.do" method="POST">
   <input type="hidden" value=${park.id } name="id"/>
-  <input type="submit" value="Delete" class="btn btn-danger btn-lg"/>
-  
+  <input id="del" type="submit" value="Delete" class="btn btn-danger btn-lg"/>
 </form>
+
+<form action="home.do" method="GET">
+<input id="home" type="submit" value="Home" class="btn btn-primary btn-lg">
+</form>
+
 </div>
-</div>
+
 </body>
 </html>

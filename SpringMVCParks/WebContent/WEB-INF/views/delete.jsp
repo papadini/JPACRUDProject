@@ -11,26 +11,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>TEST</h1>
 
-${park.name}
 
-<h3>Edit Park</h3>
-
-<form action="edit.do" method="GET">
-<input type="hidden" value ="${park.id}" name= "id">
-<input type="submit" value="Edit">
+<h3>Are you sure you want to delete ${park.name} National Park!</h3>
+<h2>What would Smokey say!</h2>
+<form action="deletePark.do" method="POST">
+  <input type="hidden" value=${park.id } name="id"/>
+  <input type="submit" value="Delete"/>
+  
 </form>
-
-<form action="delete.do" method="GET">
-<input type="hidden" value ="${park.id}" name= "id">
-<input type="submit" value="Delete">
-</form>
-
-<form action="home.do" method="GET">
-<input type="submit" value="Home">
-</form>
-
 
 </body>
 </html>

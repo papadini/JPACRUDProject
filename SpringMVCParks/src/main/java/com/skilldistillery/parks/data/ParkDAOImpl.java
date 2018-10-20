@@ -1,5 +1,7 @@
 package com.skilldistillery.parks.data;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
@@ -16,6 +18,7 @@ public class ParkDAOImpl implements ParkDAO {
 	 @PersistenceContext
 	 EntityManager em;
 	 
+	 //GET PARK BY ID
 	@Override
 	public Park findById(int id) {
 	 
@@ -23,7 +26,17 @@ public class ParkDAOImpl implements ParkDAO {
 		
 		return park;
 	}
+	
+	//LIST ALL PARKS
+	public List<Park> listAllParks() {
+		
+		String queryStr = "SELECT park FROM Park park";
+		List<Park> parks = em.createQuery(queryStr, Park.class).getResultList();
+		
+		return parks;
+	}
 
+	//CREATE PARK
 	@Override
 	public Park create(Park park) {
 		
@@ -33,7 +46,7 @@ public class ParkDAOImpl implements ParkDAO {
 		
 		return park;
 	}
-
+	//DELETE PARK
 	@Override
 	public Boolean delete(int id) {
 		
@@ -47,6 +60,30 @@ public class ParkDAOImpl implements ParkDAO {
 			return false;
 		}
 	}
+	// UPDATE PARK
+	@Override
+	public Boolean updatePark(int id,Park updatedPark) {
+		
+		Park managedPark = em.find(Park.class, id);
+		
+		managedPark.setName(updatedPark.getName());
+		managedPark.setLocation( updatedPark.getLocation());
+		managedPark.setSize(updatedPark.getSize());
+		managedPark.setVisits(updatedPark.getVisits());
+		managedPark.setDangers(updatedPark.getDangers());
+		managedPark.setFounded(updatedPark.getFounded());
+		managedPark.setAdmission(updatedPark.getAdmission());
+		managedPark.setAttraction(updatedPark.getAttraction());
+		managedPark.setDistance(updatedPark.getDistance());
+
+		
+		
+		return null;
+	}
+
+	
+
+	
 	
 	
 	

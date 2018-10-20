@@ -1,7 +1,10 @@
 package com.skilldistillery.parks.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -27,6 +30,20 @@ public class ParkMVCController {
 		mv.setViewName("WEB-INF/views/parkDetails.jsp");
 		
 		return mv;
+	}
+	
+	//LIST ALL PARKS
+	@RequestMapping(path="list.do", method= RequestMethod.GET)
+	public ModelAndView listAllParks() {
+		ModelAndView mv = new ModelAndView();
+		
+		List<Park> parks = pd.listAllParks();
+		
+		mv.addObject("parks", parks);
+		mv.setViewName("WEB-INF/views/listAll.jsp");
+		
+		return mv;
+		
 	}
 	
 	//CREATE NEW PARK
@@ -63,20 +80,61 @@ public class ParkMVCController {
 		return mv;
 	}
 	
+	//UPDATE PARK
+	@RequestMapping( path = "updatePark.do", method = RequestMethod.POST)
+	public String updatePark(Park updatedPark, int id) {
+		
+		pd.updatePark(id, updatedPark);
+		
+		return "redirect:updated.do";
+	}
+	
+	@RequestMapping(path="updated.do", method = RequestMethod.GET)
+	public ModelAndView updatedPark () {
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("WEB-INF/views/index.jsp");
+		
+		return mv;
+	}
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
+	//RETURN TO HOME PAGE MAPPING
 	@RequestMapping(path="home.do" ,method = RequestMethod.GET)
 	public String index () {
 		
 		return "WEB-INF/views/index.jsp";
+		
+	}
+	
+	
+	//GO TO ADD PAGE MAPPING
+	@RequestMapping(path="add.do" ,method = RequestMethod.GET)
+	public String add () {
+		
+		return "WEB-INF/views/add.jsp";
+		
+	}
+	
+	
+	//GO TO EDIT/UPDATE PAGE MAPPING
+	@RequestMapping(path="edit.do" ,method = RequestMethod.GET)
+	public String edit (int id, Model model) {
+		
+		Park park = pd.findById(id);
+		model.addAttribute("park", park);
+		
+		return "WEB-INF/views/edit.jsp";
+		
+	}
+	
+	//GO TO DELETE PAGE MAPPING
+	@RequestMapping(path="delete.do" ,method = RequestMethod.GET)
+	public String delete (int id, Model model) {
+		
+		Park park = pd.findById(id);
+		model.addAttribute("park", park);
+		
+		return "WEB-INF/views/delete.jsp";
 		
 	}
 

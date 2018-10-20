@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+img{
+	position:fixed;
+	z-index:-2;
+	width:100%;
+	height:190%;
+	opacity:.7;
+}
+
+h1{
+	position: relative;
+	margin-left:5%;
+	margin-top:0%;
+	top:21%;
+	left:6%;
+	font-weight: bold;
+	width: 250px;
+	height:50px;
+}
+#fields{
+	
+	position:relative;
+	margin-top:14%;
+	margin-left:8%;
+	color:black;
+	
+}
+input[type=text] {
+    background-color: #a1a1a1179179179;
+    color: black;
+    border-color: white;
+    position: relative;
+    margin-left:2%;
+}
+#square{
+	position: fixed;
+	background-color: rgb(179, 179, 179);
+	opacity:.9;
+	width:30%;
+	height:60%;
+	z-index-1;
+	margin-left:5%;
+	margin-top:12%;
+}
+#add {
+	position:relative;
+	margin-top:5%;
+}
+#home{
+	position fixed;
+	margin-left:8%;
+}
+
+#at{
+	width:256px;
+}
+#mis{
+	width:220px;
+}
+#da{
+	width:268px;
+}
+#fo{
+	width:223px;
+}
+#an{
+	width:237px;
+}
+#si{
+	width:263px;
+}
+#lo{
+	width:267px;
+}
+#na{
+	width:286px;
+}
+
+

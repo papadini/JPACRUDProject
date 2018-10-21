@@ -43,6 +43,12 @@
 </form>
 </div>
 
+<div class="row" id="find">
+<h3>See random Park</h3>
+<form action="random.do" method="GET">
+<input type="submit" value="Random" class="btn btn-Dark" />
+</form>
+</div>
 
 
 <div class="row" id="find">

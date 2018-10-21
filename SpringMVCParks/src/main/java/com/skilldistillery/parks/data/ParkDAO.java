@@ -11,6 +11,7 @@ public interface ParkDAO {
 	Boolean delete(int id);
 	public Boolean updatePark(int id,Park updatedPark);
 	public List<Park> listAllParks();
+	public List<Integer> randomPark();
 
 	
 

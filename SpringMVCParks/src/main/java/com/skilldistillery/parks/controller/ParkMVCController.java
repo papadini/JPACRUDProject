@@ -45,6 +45,23 @@ public class ParkMVCController {
 		return mv;
 		
 	}
+	//RANDOM PARK FINDER
+	@RequestMapping(path="random.do" ,method = RequestMethod.GET)
+	public ModelAndView getRandomPark() {
+		ModelAndView mv = new ModelAndView();
+															
+		List<Integer> ids = pd.randomPark();					//	Min + (int)(Math.random() * ((Max - Min) + 1))
+		int randomId = 0 + (int)(Math.random()*((ids.size()-0)-1));
+		int parkRandomId = ids.get(randomId);
+		
+		Park park = pd.findById(parkRandomId);
+		
+		mv.addObject("park", park);
+		mv.setViewName("WEB-INF/views/parkDetails.jsp");
+		
+		return mv;
+	}
+	
 	
 	//CREATE NEW PARK
 	@RequestMapping(path="createpark.do", method = RequestMethod.POST)

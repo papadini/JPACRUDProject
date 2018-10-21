@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+img{
+	position: fixed;
+	z-index:-1;
+	height:130%;
+	width:100%;
+	margin-top:-10%;
+}
+
+label{
+	position:relative;
+	margin-left: 5%;
+	font-family: 'Roboto Mono', monospace;
+	font-weight:bold;
+}
+
+#button{
+	position:relative;
+	margin-left: 55%;
+	margin-top:30%;
+	
+}
+
+h1{
+	position:relative;
+	left:28%;
+	margin-top:2%;
+	font-family: 'Roboto Mono', monospace;
+	font-weight: bold;
+	
+}
+#block1{
+	position:relative;
+	left:24%;
+	font-family: 'Roboto Mono', monospace;
+	font-weight: bold;
+}
+#block2{
+	position:relative;
+	left:24%;
+	font-family: 'Roboto Mono', monospace;
+	font-weight: bold;
+}
+#block3{
+	position:relative;
+	left:23%;
+	font-family: 'Roboto Mono', monospace;
+	font-weight: bold;
+}
+
+#edit{
+	
+}
+#delete{
+	position:relative;
+	margin-left:8%;
+}
+#home{
+	position:relative;
+	margin-left:12%;
+}

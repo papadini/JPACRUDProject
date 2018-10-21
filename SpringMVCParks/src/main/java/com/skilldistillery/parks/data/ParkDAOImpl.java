@@ -1,5 +1,6 @@
 package com.skilldistillery.parks.data;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -34,6 +35,20 @@ public class ParkDAOImpl implements ParkDAO {
 		List<Park> parks = em.createQuery(queryStr, Park.class).getResultList();
 		
 		return parks;
+	}
+	
+	//RANDOM PARK
+	public List<Integer> randomPark() {
+		
+		String queryStr = "SELECT park FROM Park park";
+		List<Park> parks = em.createQuery(queryStr, Park.class).getResultList();
+		List<Integer> ids = new ArrayList<>();
+		for (Park park : parks) {
+			ids.add(park.getId());
+		}
+		
+		
+		return ids;
 	}
 
 	//CREATE PARK

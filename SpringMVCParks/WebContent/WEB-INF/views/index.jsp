@@ -37,6 +37,14 @@
 </div>
 
 <div class="row" id="find">
+<h3>Find Park by Name</h3>
+<form action="getparkname.do" method="GET">
+  <input type="text" name="name" />
+  <input type="submit" value="Find Park" class="btn btn-Dark"/>
+</form>
+</div>
+
+<div class="row" id="find">
 <h3>List all Parks</h3>
 <form action="list.do" method="GET">
 <input type="submit" value="List Parks" class="btn btn-Dark" />

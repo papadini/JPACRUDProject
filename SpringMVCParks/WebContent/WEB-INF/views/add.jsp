@@ -59,7 +59,7 @@
 		<div class="row">
 			<label>Founded(year)</label>
 			<div class="col-3">
-				<input  id="fo"type="date" name="founded" />
+				<input  id="fo"type="number" name="founded" />
 			</div>
 		</div>
 		<div class="row">

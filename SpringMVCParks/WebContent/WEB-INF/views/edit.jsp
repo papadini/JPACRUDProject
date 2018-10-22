@@ -41,8 +41,8 @@
 <input id="vis" type="number" name="visits" value= "${ park.visits}"/><br>
 <label>Dangers</label>
 <input type="text" id="dan" name="dangers" value= "${ park.dangers}"/><br>
-<label>Date Founded</label>
-<input type="date" id="found" name="founded" value= "${ park.founded}"/><br>
+<label>Year Founded</label>
+<input type="number" id="found" name="founded" value= "${ park.founded}"/><br>
 <label>Admission cost $</label>
 <input type="number" id="ad" name="admission" value= "${ park.admission}"/><br>
 <label>Attraction</label>

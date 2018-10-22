@@ -32,6 +32,19 @@ public class ParkMVCController {
 		return mv;
 	}
 	
+	//GET PARK BY NAME
+	@RequestMapping(path="getparkname.do" ,method = RequestMethod.GET)
+	public ModelAndView findParkByName( String name ) {
+		
+		ModelAndView mv = new ModelAndView();
+		Park park = pd.findByName(name);
+		
+		mv.addObject("park", park);
+		mv.setViewName("WEB-INF/views/parkDetails.jsp");
+		
+		return mv;
+	}
+	
 	//LIST ALL PARKS
 	@RequestMapping(path="list.do", method= RequestMethod.GET)
 	public ModelAndView listAllParks() {

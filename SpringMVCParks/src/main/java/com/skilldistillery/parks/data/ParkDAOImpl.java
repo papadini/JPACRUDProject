@@ -28,6 +28,18 @@ public class ParkDAOImpl implements ParkDAO {
 		return park;
 	}
 	
+	//GET PARK BY NAME
+	//SELECT * FROM park where park.name like "arc%";
+	@Override
+	public Park findByName(String name) {
+		
+		String queryStr = "SELECT park FROM Park park WHERE park.name like :n";
+		
+		//Park park = em.createQuery(queryStr, Park.class).getParameter(name, type)
+		
+		return null;
+	}
+	
 	//LIST ALL PARKS
 	public List<Park> listAllParks() {
 		

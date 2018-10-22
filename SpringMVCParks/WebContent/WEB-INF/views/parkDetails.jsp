@@ -39,11 +39,11 @@ ${park.visits}
 ${park.dangers}
 <label>Year founded: &nbsp</label>
 ${park.founded}
-<label>Main attraction: &nbsp</label>
-${park.attraction}
 </div>
 
 <div id="block3">
+<label>Main attraction: &nbsp</label>
+${park.attraction}
 <label>Admission cost: &nbsp</label>
 ${park.admission}
 <label>Distance from Denver:&nbsp </label>

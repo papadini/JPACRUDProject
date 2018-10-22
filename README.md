@@ -14,7 +14,7 @@ This project was built from and empty page to what it is now. I still did not ha
 
 
 
-###Lessons learned:
+### Lessons learned:
 
 -CSS is an animal in itself, tweaking was exhausting bu ti learned maybe new ways to do things and just strengthen my skills overall.
 -One small issue in your DAO will can make it seem like nothing is happening, I was adding to the database but not showing for awhile due to a small issue in my DAO.

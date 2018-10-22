@@ -35,9 +35,10 @@ public class ParkDAOImpl implements ParkDAO {
 		
 		String queryStr = "SELECT park FROM Park park WHERE park.name like :n";
 		
-		//Park park = em.createQuery(queryStr, Park.class).getParameter(name, type)
+		Park park = em.createQuery(queryStr, Park.class)
+		.setParameter("n", "%" + name + "%").getSingleResult();
 		
-		return null;
+		return park;
 	}
 	
 	//LIST ALL PARKS

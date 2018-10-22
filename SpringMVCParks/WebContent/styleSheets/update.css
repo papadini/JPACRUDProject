@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+body {
+	background-image:
+		url(https://cdn.wallpapersafari.com/58/58/BhF0f5.jpg);
+		
+	
+}
+
+#narrows {
+	position: relative;
+	width: 70%;
+	height: 110%;
+	margin-left: 5%;
+	margin-top: -10%;
+}
+
+edittext {
+	position: relative;
+	margin-top: 10%;
+}
+
+label {
+	postion: relative;
+	margin: right:2%;
+	color: black;
+	font-weight: bold;
+}
+
+h2 {
+	position: relative;
+	left: 60%;
+	margin-bottom: 5%;
+	color: black;
+	top: 5%;
+}
+
+h3 {
+	position: relative;
+	left: 10%;
+	top: 2%;
+	margin-bottom: 10%;
+	color: black;
+}
+
+#name {
+	position: relative;
+	top: 20%;
+}
+
+#loc {
+	
+}
+
+#size {
+	
+}
+
+#vis {
+	
+}
+
+#dan {
+	
+}
+
+#found {
+	
+}
+
+#ad {
+	
+}
+
+#att {
+	
+}
+
+#dis {
+	
+}
